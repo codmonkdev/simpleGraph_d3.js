@@ -1,0 +1,177 @@
+﻿[ {
+  "id" : 231,
+  "name" : "United States",
+  "name_ru" : "США",
+  "fips" : "US",
+  "iso2" : "US",
+  "iso3" : "USA",
+  "centroid" : [ -112.49355035565128, 45.695478385659634 ],
+  "dataCountries" : [ {
+    "id" : 11600,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 1.9390604E13,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 43,
+  "name" : "China",
+  "name_ru" : "КНР (Китайская Народная Республика)",
+  "fips" : "CH",
+  "iso2" : "CN",
+  "iso3" : "CHN",
+  "centroid" : [ 103.83468822458565, 36.56334156366872 ],
+  "dataCountries" : [ {
+    "id" : 2088,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 1.2237700479375E13,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 114,
+  "name" : "Japan",
+  "name_ru" : "Япония",
+  "fips" : "JA",
+  "iso2" : "JP",
+  "iso3" : "JPN",
+  "centroid" : [ 137.973869564205, 37.539824849014295 ],
+  "dataCountries" : [ {
+    "id" : 5626,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 4.87213694550759E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 58,
+  "name" : "Germany",
+  "name_ru" : "Германия",
+  "fips" : "GM",
+  "iso2" : "DE",
+  "iso3" : "DEU",
+  "centroid" : [ 10.392329661732365, 51.1101539445883 ],
+  "dataCountries" : [ {
+    "id" : 2842,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 3.6774391297766E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 78,
+  "name" : "United Kingdom",
+  "name_ru" : "Великобритания",
+  "fips" : "UK",
+  "iso2" : "GB",
+  "iso3" : "GBR",
+  "centroid" : [ -2.900499032133904, 54.160178891726254 ],
+  "dataCountries" : [ {
+    "id" : 3886,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 2.62243395960416E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 103,
+  "name" : "India",
+  "name_ru" : "Индия",
+  "fips" : "IN",
+  "iso2" : "IN",
+  "iso3" : "IND",
+  "centroid" : [ 79.61881831457943, 22.881320961152998 ],
+  "dataCountries" : [ {
+    "id" : 5104,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 2.59749116289767E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 74,
+  "name" : "France",
+  "name_ru" : "Франция",
+  "fips" : "FR",
+  "iso2" : "FR",
+  "iso3" : "FRA",
+  "centroid" : [ 2.5504243346368107, 46.56487526090746 ],
+  "dataCountries" : [ {
+    "id" : 3654,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 2.58250130721642E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 32,
+  "name" : "Brazil",
+  "name_ru" : "Бразилия",
+  "fips" : "BR",
+  "iso2" : "BR",
+  "iso3" : "BRA",
+  "centroid" : [ -53.08875437526222, -10.772282484852248 ],
+  "dataCountries" : [ {
+    "id" : 1566,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 2.05550550222473E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 110,
+  "name" : "Italy",
+  "name_ru" : "Италия",
+  "fips" : "IT",
+  "iso2" : "IT",
+  "iso3" : "ITA",
+  "centroid" : [ 12.071670031437792, 42.79116216524726 ],
+  "dataCountries" : [ {
+    "id" : 5452,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 1.93479793741133E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : 39,
+  "name" : "Canada",
+  "name_ru" : "Канада",
+  "fips" : "CA",
+  "iso2" : "CA",
+  "iso3" : "CAN",
+  "centroid" : [ -98.26094579666776, 61.39306641457241 ],
+  "dataCountries" : [ {
+    "id" : 1914,
+    "indicator_code" : "NY.GDP.MKTP.CD",
+    "indicator_name" : "GDP (current US$)",
+    "year" : 2017,
+    "value" : 1.65304279525504E12,
+    "yearly_change_percent" : null
+  } ]
+}, {
+  "id" : null,
+  "name" : "Other countries",
+  "name_ru" : "Остальные страны",
+  "fips" : null,
+  "iso2" : "OW",
+  "iso3" : "OWD",
+  "centroid" : null,
+  "dataCountries" : [ {
+    "id" : null,
+    "indicator_code" : null,
+    "indicator_name" : "Общее значение оставшихся стран",
+    "year" : 2017,
+    "value" : 2.5583436373128047E13,
+    "yearly_change_percent" : null
+  } ]
+} ]

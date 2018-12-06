@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","id":"RUS","geometry":{"type":"Point","coordinates":[96.6894444592648, 61.98824512932785]},"properties":{"name":"Russia","population":44}},
+{"type":"Feature","id":"USA","geometry":{"type":"Point","coordinates":[-112.49355035565128,45.695478385659634]},"properties":{"name":"USA","population":62}},
+{"type":"Feature","id":"AUS","geometry":{"type":"Point","coordinates":[134.49097596041068, -25.7332602134989]},"properties":{"name":"Australia","population":51}}
+]}

@@ -1,0 +1,17 @@
+<% var data = {
+  title: "Заголовок | Проект",
+  author: "codmonkdev"
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+<section class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <p><h4>Отображение ВВП стран мира на пузырьковой карте за 2017 год - <a href="world.html">world.html</a></h4></p>
+        <p><h4>Отображение первых 10 стран мира по размеру ВВП на диаграме за 2016 год  - <a href="diagram.html">diagram.html</a></h4></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
