@@ -37,7 +37,7 @@ function getMaxMinYear(data){
 }
 
 let url = "data/countries.json";
-let url2 ="data/ВВП.json";//"data/data.json";//"data/word-country-data.json";//"data/word-country-centroids.json"; 
+let url2 ="data/data_new.json";//"data/data.json";//"data/word-country-data.json";//"data/word-country-centroids.json"; 
 d3.json(url, function (error, countries) {
 	if (error) console.log(error);
 	d3.json(url2, function (error, places) {
