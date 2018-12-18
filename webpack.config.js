@@ -25,6 +25,8 @@ module.exports = {
     'js/index.min.js': './src/js/index.js' 
     ,'js/world.min.js': './src/js/world.js' 
     ,'js/diagram.min.js': './src/js/diagram.js' 
+    ,'js/addImageInPage.min.js': './src/js/addImageInPage.js' 
+    ,'js/flagCircleInMap.min.js': './src/js/flagCircleInMap.js' 
     ,'css/style.css': './src/scss/style.scss'
     ,'css/diagram.css': './src/scss/diagram.scss'
     ,'css/world.css': './src/scss/world.scss'
