@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 html,
 body
 {
@@ -10,12 +12,11 @@ body
 div {
   margin:0;
   padding:0;
-
 }
 
 div#mapContainer{
   width:100%;
-  height:calc(100% - 150px);
+  height:calc(100% - 220px);
 }
 
 path {
@@ -44,7 +45,7 @@ div.tooltip {
     position: absolute;			
     text-align: center;			
     width: auto;					
-    height: 28px;					
+    height: auto;					
     padding: 2px;				
     font: 12px sans-serif;		
     background: burlywood;	

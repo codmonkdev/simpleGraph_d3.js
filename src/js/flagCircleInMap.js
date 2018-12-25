@@ -3,11 +3,12 @@ import * as d3 from 'd3';
 
 export class flagCircleInMap {
 
-    constructor(places, svg, projection, imageName) {
-        this.places = places;
+    constructor(data, svg, projection, imageName,mxval) {
+        this.data = data;
         this.svg = svg;
         this.projection = projection;
         this.imageName = imageName;
+        this.mxval = mxval;
     }
 
     sortIfDataCountries(x, y) {
@@ -26,14 +27,27 @@ export class flagCircleInMap {
         return d3.descending(resX, resY);
     }
 
+    static getMaxValue(data) {
+        let maxValue = -99999;
+        for (let d of data) {
+            d.dataCountries.forEach(function (d1) {
+                let elem = d1.value;
+                if (elem > maxValue) {
+                    maxValue = elem;
+                }
+            });
+        }
+
+        return maxValue;
+    }
+
     addFlagCircleInMap() {
-        console.log("1");
-        this.places.sort(this.sortIfDataCountries);
+        this.data.sort(this.sortIfDataCountries);
 
-        let maxValue = this.places[0].dataCountries[0].value;
+        let maxValue = this.data[0].dataCountries[0].value;//this.mxval;//this.getMaxValue(this.data);//
+        console.log("maxValue="+maxValue);
 
-        let sizeScale = d3.scaleSqrt().domain([0, maxValue]).range([0, 60]);
-        console.log("2");
+        let sizeScale = d3.scaleSqrt().domain([0, maxValue]).range([0, 70]);
         // Define the div for the tooltip
         let div;
         if (document.getElementById("tooltip") !== null) {
@@ -45,24 +59,20 @@ export class flagCircleInMap {
                 .attr("class", "tooltip")
                 .style("opacity", 0);
         }
-        console.log("3");
-        this.places = this.places.filter(function (obj) {
+        this.data = this.data.filter(function (obj) {
             return obj.name !== "Other world";
         });
 
         let projection = this.projection;
         let imageName = this.imageName;
 
-        console.log(this.places);
-
         this.svg.selectAll("circle").remove();
 
-        console.log("4");
         this.svg.selectAll("circle")
-            .data(this.places)
-            .enter().append("circle") 
+            .data(this.data)
+            .enter().append("circle")
             .attr("id", "flags")
-//            .transition().duration(200)
+            //            .transition().duration(200)
             .attr('r', function (d) {
                 let res;
                 if (typeof (d.dataCountries) != "undefined" && typeof (d.dataCountries[0]) != "undefined") {
@@ -80,8 +90,8 @@ export class flagCircleInMap {
                 res = sizeScale(res);
                 return res;
             })
-            .attr('cx', function (d) { /*console.log(d.iso2);console.log(d.iso2 + "_cx=" + projection(d.centroid)[0]);*/ return projection(d.centroid)[0] })
-            .attr('cy', function (d) { /*console.log(d.iso2);console.log(d.iso2 + "_cx=" + projection(d.centroid)[1]);*/ return projection(d.centroid)[1] })
+            .attr('cx', function (d) { return projection(d.centroid)[0] })
+            .attr('cy', function (d) { return projection(d.centroid)[1] })
             .style("fill", function (d) { return "url(#" + imageName + d.iso2 + ")"; })
             .on("mouseover", function (d) {
                 d3.select(this).classed("active", true);
@@ -107,7 +117,114 @@ export class flagCircleInMap {
                     // .duration(500)		
                     .style("opacity", 0);
             });
-            console.log("5");
+
+    }
+
+    static getMaxValueNew(data) {
+        let maxValue = -99999;
+
+        data.forEach(function (d) {
+            let elem = d.value;
+            if (elem > maxValue) {
+                maxValue = elem;
+            }
+        });
+
+        return maxValue;
+    }
+    sortIfDataCountriesNew(x, y) {
+        let resX = 0;
+        if (typeof (x.value) != "undefined" && typeof (x.value) != "undefined") {
+            if (x.value != null) {
+                resX = x.value;
+            }
+        }
+        let resY = 0;
+        if (typeof (y.value) != "undefined" && typeof (y.value) != "undefined") {
+            if (y.value != null) {
+                resY = y.value;
+            }
+        }
+        return d3.descending(resX, resY);
+    }
+
+    addFlagCircleInMapNew() {
+        this.data.sort(this.sortIfDataCountriesNew);
+
+        let maxValue = this.data[0].value;//this.mxval;//this.getMaxValueNew(this.data);//
+        console.log("maxValue="+maxValue);
+
+        let sizeScale = d3.scaleSqrt().domain([0, maxValue]).range([0, 70]);
+        // Define the div for the tooltip
+        let div;
+        if (document.getElementById("tooltip") !== null) {
+            div = d3.select("div#tooltip");
+        }
+        else {
+            div = d3.select("body").append("div")
+                .attr("id", "tooltip")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+        }
+        this.data = this.data.filter(function (obj) {
+            return obj.name !== "Other world";
+        });
+
+        let projection = this.projection;
+        let imageName = this.imageName;
+
+        this.svg.selectAll("circle").remove();
+
+        this.svg.selectAll("circle")
+            .data(this.data)
+            .enter().append("circle")
+            .attr("id", "flags")
+            //            .transition().duration(200)
+            .attr('r', function (d) {
+                let res;
+                if (typeof (d.value) != "undefined" && typeof (d.value) != "undefined") {
+                    if (d.value != null) {
+                        res = d.value;
+                    }
+                    else {
+                        res = 0;
+                    }
+
+                }
+                else {
+                    res = 0;
+                };
+                res = sizeScale(res);
+                return res;
+            })
+            .attr('cx', function (d) { return projection(d.centroid)[0] })
+            .attr('cy', function (d) { return projection(d.centroid)[1] })
+            .style("fill", function (d) { return "url(#" + imageName + d.iso2 + ")"; })
+            .on("mouseover", function (d) {
+                d3.select(this).classed("active", true);
+                let res = 0;
+                if (typeof (d.value) != "undefined" && typeof (d.value) != "undefined") {
+                    if (d.value != null) {
+                        res = (d.value);
+                    }
+                }
+                const htmlData = d.rusCountry + "<br/>Значение:" + Math.round(res * 100) / 100 + "";
+
+                div.transition()
+                    // .duration(200)		
+                    .style("opacity", .9);
+                div.html(htmlData)
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+
+            })
+            .on("mouseout", function (d) {
+                d3.select(this).classed("active", false);
+                div.transition()
+                    // .duration(500)		
+                    .style("opacity", 0);
+            });
+
     }
 
 }

@@ -15,9 +15,6 @@ export class AddImageInPage {
   addImageInPage() {
     let defs = this.svgElement.append("defs");
 
-
-    //let svgElement = this.svgElement;
-    //let data = this.data;
     let fieldName = this.fieldName;
     let imageName = this.imageName;
     let imagePath = this.imagePath;

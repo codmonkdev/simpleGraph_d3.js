@@ -1,14 +1,51 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<link rel="shortcut icon" href="favicon/favicon.ico">
-<link rel="stylesheet" href="css/world.css">
-<style>
-</style>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="css/world.css">
+
+    <title>Bubble diagram</title>
+</head>
+
 <body>
-    <!-- <h1>Пузырьковая диаграмма по ВВП стран мира</h1>     -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Пузырьковая диаграмма</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Выбрать данные</a>
+                        <div id="dropDownList" class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="nameContainer"><h4>Промышленность (включая строительство), добавленная стоимость (в текущих ценах)</h4></div>
     <div id="mapContainer"></div>
     <div id="vis">
         <!-- <button id="play-button">Play</button> -->
     </div>
+
     <script src="js/world.min.js"></script>
+
 </body>
+
+</html>
