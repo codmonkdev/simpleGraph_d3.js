@@ -1,59 +1,31 @@
 $font-stack: -apple-system, BlinkMacSystemFont,Roboto,'Open Sans','Helvetica Neue',sans-serif;
 
 @import "~bootstrap/scss/bootstrap";
+@import "~@coreui/coreui/scss/coreui";
+@import "~@coreui/icons/scss/coreui-icons";
+@import "~simple-line-icons/scss/simple-line-icons";
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/Roboto-Regular.ttf);
-}
-
-header {
-  position: relative;
-  background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-}
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('img/video.png') black no-repeat center center scroll;
+#map-holder {
+    width: 100vw;
+    height: 100vh;
   }
-  header video {
-    display: none;
+  svg rect {
+    fill: #2A2C39;   /* map background colour */
   }
-}
+  .country{
+    fill: #d0d0d0;   /* country colour */
+    stroke: #2A2C39; /* country border colour */
+    stroke-width: 1; /* country border width */
+  }
+  .country-on{
+    fill: #4B5358;   /* highlight colour for selected country */
+  }
+  .countryLabel{
+    display: none;   /* hide all country labels by default */
+  }
+  .countryName{
+    fill: #FFFAFF;   /* country label text colour */
+  }
+  .countryLabelBg{
+    fill: #30BCED;   /* country label background colour */
+  }
