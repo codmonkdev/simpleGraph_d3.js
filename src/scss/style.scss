@@ -5,10 +5,10 @@ $font-stack: -apple-system, BlinkMacSystemFont,Roboto,'Open Sans','Helvetica Neu
 @import "~@coreui/icons/scss/coreui-icons";
 @import "~simple-line-icons/scss/simple-line-icons";
 
-#map-holder {
-    width: 100vw;
-    height: 100vh;
-  }
+// #map-holder {
+//     width: 100vw;
+//     height: 100vh;
+//   }
   svg rect {
     fill: #2A2C39;   /* map background colour */
   }
